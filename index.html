@@ -30,18 +30,38 @@
                     <label class="radio-inline"><input type="radio" ng-model="initials" name="initials" value="AY">Amitesh</label>
                     <label class="radio-inline"><input type="radio" ng-model="initials" name="initials" value="BKC">BK Chindhalore</label>
                     <label class="radio-inline"><input type="radio" ng-model="initials" name="initials" value="SPG">S P Gupta</label>
-                <div class="form-group">
-                    <label for="wd">WindDirection:</label>
-                    <input type="text" class="form-control" ng-model="wd" name="wd">
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                      <label for="wd">WindDirection:</label>
+                      <input type="text" class="form-control" ng-model="wd" name="wd">
+                  </div>
+                  <div class="form-group col-sm-6">
+                          <label for="ws">WindSpeed:</label>
+                          <input type="text" class="form-control" ng-model="ws" name="ws">
+                  </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="db">Dry Bulb :</label>
+                    <input type="text" class="form-control" ng-model="db" name="db" placeholder="Enter dry Bulb Temperature -- E.g 20.6">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label for="wb">Wet Bulb :</label>
+                    <input type="text" class="form-control" ng-model="wb" name="wb" placeholder="Please enter Wet Bulb Temperature -- E.g 18.4">
+                  </div>
+            </div> 
+              <div class="row">
+                <div class="form-group col-sm-6">
+                        <label for="vis">Visibility :</label>
+                        <input type="text" class="form-control" ng-model="vis" name="vis" placeholder="Enter visibility -- E.g 5000">
                 </div>
-                <div class="form-group">
-                        <label for="ws">WindSpeed:</label>
-                        <input type="text" class="form-control" ng-model="ws" name="ws">
-                </div>
-                <div class="form-group">
-                        <label for="vis">Visibility:</label>
-                        <input type="text" class="form-control" ng-model="vis" name="vis">
-                </div>
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label for="pressure">Pressure :</label>
+                    <input type="text" class="form-control" ng-model="pressure" name="pressure" placeholder="Please enter pressure -- E.g 951.4">
+                  </div>
+                </div> 
+              </div>  
                 <label class="radio-inline"><input type="radio" ng-model="wx" value="HZ" checked="">HAZE</label>
                 <label class="radio-inline"><input type="radio" ng-model="wx" value="BR" checked="">MIST</label>
                 <label class="radio-inline"><input type="radio" ng-model="wx" value="FG">FOG</label>
@@ -65,23 +85,16 @@
                         <select ng-model="c2Height" ng-options="x for x in c2heights">
                         </select>
                 </div>
-             
-                
-                <div class="form-group">
-                    <label for="db">DryBulb:</label>
-                    <input type="text" class="form-control" ng-model="db" name="db" placeholder="Enter dry Bulb Temperature -- E.g 20.6">
+                <br>
+                <br>
+                <div class="row"> 
+                  <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary" id="metar" value="metar">Generate Metar</button>
                   </div>
-                  <div class="form-group">
-                    <label for="wb">WetBulb:</label>
-                    <input type="text" class="form-control" ng-model="wb" name="wb" placeholder="Please enter Wet Bulb Temperature -- E.g 18.4">
+                  <div class ="col-sm-2">
+                    <button type="submit" class="btn btn-primary" id="metreport" value="metreport">Generate MET REPORT</button>
                   </div>
-                  <div class="form-group">
-                    <label for="pressure">Pressure:</label>
-                    <input type="text" class="form-control" ng-model="pressure" name="pressure" placeholder="Please enter pressure -- E.g 951.4">
-                  </div>
-              <button type="submit" class="btn btn-primary" id="metar" value="metar">Generate Metar</button>
-              &nbsp;&nbsp;&nbsp;
-              <button type="submit" class="btn btn-primary" id="metreport" value="metreport">Generate MET REPORT</button>
+                </div>
               <!-- &nbsp;&nbsp;&nbsp; 
               <button type="submit" class="btn btn-default" ng-click="sendToOlbs()">Send Olbs</button> -->
             </form>
