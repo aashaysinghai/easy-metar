@@ -8,7 +8,7 @@ $(document).ready(function () {
            // $('#myform').submit();  // trigger the validation & submit   
            angular.element(document.getElementById('mainApp')).scope().generate();   
         }else{
-            alert('Please check all the fields are correct. And Select your Name');
+            alert('Please check all the fields are correct and filled. And Select your Name');
         }
     });
     $('#metreport').on('click', function(){  // capture the click
@@ -16,7 +16,7 @@ $(document).ready(function () {
            // $('#myform').submit();  // trigger the validation & submit   
            angular.element(document.getElementById('mainApp')).scope().generatePDF();   
         }else{
-            alert('Please check all the fields are correct. And Select your Name');
+            alert('Please check all the fields are correct and filled. And Select your Name');
         }
     });
     $('#myform').validate({ // initialize the plugin
@@ -48,12 +48,12 @@ $(document).ready(function () {
         },
         messages :{
             wd : {
-                required : 'Enter username',
+                required : 'Enter wind direction',
                 minlength: 'Please enter three digit direction',
                 maxlength: 'Please enter three digit direction'
             },
             ws : {
-                required : 'Enter username',
+                required : 'Enter wind speed',
                 minlength: 'Please enter two digit speed',
                 maxlength: 'Please enter two digit speed'
             },
